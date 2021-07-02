@@ -12,8 +12,8 @@ class TEXT:
     THUMBNAIL_CAPTION = f"{BACKHAND_INDEX_POINTING_UP_LIGHT_SKIN_TONE} Your Permanent thumbnail"
 
 
-     ABOUT = """**𝖬𝗒 𝖣𝖾𝗍𝖺𝗂𝗅𝗌 :**
-     
+    ABOUT = """**𝖬𝗒 𝖣𝖾𝗍𝖺𝗂𝗅𝗌 :**
+    
 ** My Name:** {bot_name}
     
 ** Language:** [Python 3](https://www.python.org/)
