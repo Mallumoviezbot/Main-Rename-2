@@ -24,7 +24,7 @@ class TEXT:
 
 ** Channel:** [All Movie Rockers](https://t.me/All_Movie_Rockers)
 
-** Group:** ©[Creator](https://t.me/shreevish)
+** Group:** [Creator](https://t.me/shreevish)
 """
 
     HELP_USER = """**Follow Below Steps:**
