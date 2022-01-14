@@ -1,5 +1,5 @@
 import logging
-from pyrogram import Client, filters
+from pyrogram import Client as RenamerNs, filters
 from pyrogram.errors import InputUserDeactivated, UserNotParticipant, FloodWait, UserIsBlocked, PeerIdInvalid
 import datetime
 import time
@@ -32,7 +32,7 @@ async def broadcast_messages(user_id, message):
 
 
         
-@Client.on_message(filters.command("broadcast") & filters.user(Config.ADMINS) & filters.reply)
+@RenamerNs.on_message(filters.command("broadcast") & filters.user(Config.ADMINS) & filters.reply)
 # https://t.me/GetTGLink/4178
 async def verupikkals(bot, message):
     users = await db.get_all_users()
