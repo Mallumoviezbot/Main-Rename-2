@@ -34,10 +34,10 @@ async def broadcast_messages(user_id, message):
         
 @RenamerNs.on_message(filters.command("broadcast") & filters.user(Config.ADMINS) & filters.reply)
 # https://t.me/GetTGLink/4178
-async def verupikkals(bot, message):
+async def verupikkals(c, m):
     users = await db.get_all_users()
-    b_msg = message.reply_to_message
-    sts = await message.reply_text(
+    b_msg = m.reply_to_message
+    sts = await m.reply_text(
         text='Broadcasting your messages...'
     )
     start_time = time.time()
