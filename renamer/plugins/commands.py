@@ -172,7 +172,7 @@ async def broadcast_in(_, m: Message):
 @RenamerNs.on_message(filters.private & filters.command("status") & filters.user(Config.ADMINS))
 async def sts(c, m):
     
-    total_users = await db.total_users_count()
+    total_users = await c.db.total_users_count()
     await m.reply_text(text=f"Total user(s) {total_users}", quote=True)
 
 
@@ -237,7 +237,7 @@ async def unban(c, m):
         except:
             traceback.print_exc()
             unban_log_text += f"\n\nUser notification failed! \n\n`{traceback.format_exc()}`"
-        await db.remove_ban(user_id)
+        await c.db.remove_ban(user_id)
         print(unban_log_text)
         await m.reply_text(
             unban_log_text,
