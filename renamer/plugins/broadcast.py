@@ -4,7 +4,7 @@ from pyrogram.errors import InputUserDeactivated, UserNotParticipant, FloodWait,
 import datetime
 import time
 from ..database.users_chats_db import db
-from config import Config
+from renamer.config import Config
 import asyncio
 
 
