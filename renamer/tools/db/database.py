@@ -1,6 +1,6 @@
 import datetime
 import motor.motor_asyncio
-from config import Config
+from renamer.config import Config
 
 
 class Database:
