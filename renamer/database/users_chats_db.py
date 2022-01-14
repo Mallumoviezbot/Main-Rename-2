@@ -1,5 +1,5 @@
 import motor.motor_asyncio
-from renamer.config import Config
+from ..config import Config
 
 class Database:
     
