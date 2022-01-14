@@ -28,3 +28,13 @@ class Config:
     except:
         TRACE_CHANNEL = None
         logger.warning("Trace channel id was invalid")
+    # Database Name
+    DATABASE_NAME = os.environ.get('DATABASE_NAME', "URL-BOT")
+    
+    # Log channel for banning spammers
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-100"))
+    
+    # space to divide admins
+    ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMINS', '').split()]
+    # Sql Database url
+    MONGODB_URI = os.environ.get("MONGODB_URI", "")
