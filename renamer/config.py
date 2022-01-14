@@ -1,6 +1,9 @@
 import os
 import logging
 logger = logging.getLogger(__name__)
+import re
+
+id_pattern = re.compile(r'^.\d+$')
 
 
 class Config:
