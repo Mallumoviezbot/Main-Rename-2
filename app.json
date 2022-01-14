@@ -56,6 +56,19 @@
             "description": "Set the timegap in sec to reduce FloodWait. If you don't want to add leave empty. ",
             "required": false
         },
+        "DATABASE_NAME": {
+            "description": "Name of the database in mongoDB. For more help watch this video - https://youtu.be/dsuTn4qV2GA",
+            "value": "URL-BOT",
+            "required": false
+        },
+        "LOG_CHANNEL": {
+            "description": "To get logs",
+            "required": false
+        },
+        "MONGODB_URI": {
+            "description": "Your MongoDB URI",
+            "required": false
+        },
         "TRACE_CHANNEL": {
             "description": "A telegram channel or group link to know who are using bot",
             "required": false
