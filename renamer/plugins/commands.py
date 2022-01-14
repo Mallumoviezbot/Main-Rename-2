@@ -8,6 +8,8 @@ from pyrogram import Client as RenamerNs, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup 
 from pyrogram.emoji import *
 
+from ..tools.db.database import db
+from ..tools.broadcast import broadcast_handler
 
 ################## Help command ##################
 
@@ -155,3 +157,10 @@ async def password(c, m):
                 return await m.reply_text(f'Incorrect password', quote=True)
     else:
         await m.reply_text(f'**This bot was publicly available to all {SMILING_FACE_WITH_HEARTS}.**\nIf you are the owner of the bot to make bot private add bot password in Config Vars {LOCKED_WITH_KEY}.', quote=True)
+
+        
+################## broadcast command ##################        
+        
+@RenamerNs.on_message(filters.command("broadcast") & filters.user(Config.ADMINS) & filters.reply & ~filters.edited)
+async def broadcast_in(_, m: Message):
+    await broadcast_handler(m)        
