@@ -6,7 +6,7 @@ import datetime
 import aiofiles
 import traceback
 import aiofiles.os
-from .config import Config
+from config import Config
 from ..tools.db.database import db
 from pyrogram.types import Message
 from pyrogram.errors import FloodWait, InputUserDeactivated, UserIsBlocked, PeerIdInvalid
