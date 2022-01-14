@@ -5,7 +5,7 @@ from ..config import Config
 from ..tools.text import TEXT
 from ..database.database import *
 from pyrogram import Client as RenamerNs, filters
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup 
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message 
 from pyrogram.emoji import *
 
 from ..tools.db.database import db
